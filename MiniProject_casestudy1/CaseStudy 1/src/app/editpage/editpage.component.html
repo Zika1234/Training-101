@@ -1,0 +1,28 @@
+  <h3 class="jumbotron">Edit Product Details </h3>
+  
+  <table class="col-sm-offset-4">
+      <tr>
+        <td>ID <span style="color:red">*</span></td>
+        <td><input type="text" [(ngModel)]="id" required> </td>
+      </tr>
+      <tr>
+        <td>Name<span style="color:red">*</span></td>
+        <td><input type="text" [(ngModel)]="name" required></td>
+      </tr>
+      <tr>
+        <td>Descriptin<span style="color:red">*</span></td>
+        <td><input type="text" [(ngModel)]="des" required></td>
+      </tr>
+      <tr>
+        <td>Price<span style="color:red">*</span></td>
+        <td><input type="text" [(ngModel)]="price" required></td>
+      </tr>
+      <tr>
+        <td><button type="button" class="btn btn-success" (click)="onSubmit()">Submit</button></td>
+        <td><button type="button" class="btn btn-warning" (click)="homepage()">Cancel</button></td>
+
+      </tr>
+  </table>
+
+
+ 

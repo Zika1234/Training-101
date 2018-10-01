@@ -1,0 +1,14 @@
+[
+     {"ID":1,"Name":"Redmi","Description":"4GB+32Gb","Price": 5999},
+     {"ID":2,"Name":"Iphone","Description":"4GB+64Gb","Price": 50999},
+     {"ID":3,"Name":"Honor","Description":"Finger Lock","Price": 5999},
+     {"ID":4,"Name":"MicroMax","Description":"Wide Screen ","Price": 5999},
+     {"ID":5,"Name":"Moto","Description":"Resolution","Price": 5999},
+     {"ID":6,"Name":"Nokia","Description":"Stable","Price": 5999},
+     {"ID":7,"Name":"Pixel","Description":"Efficient","Price": 5999},
+     {"ID":8,"Name":"One+","Description":"Camera Quality","Price": 5999},
+     {"ID":9,"Name":"HTC","Description":"Nice one","Price": 5999},
+     {"ID":10,"Name":"CoolPad","Description":"User Choice","Price": 5999},
+     {"ID":11,"Name":"Xiomi","Description":"Highest Selling","Price": 5999},
+     {"ID":12,"Name":"Huwai","Description":"Cheap and efficient","Price": 5999}
+]
