@@ -1,0 +1,72 @@
+<div class="container">
+  <h2 class="jumbotron">Welcome to Product Application </h2>
+ 
+  <div class="table-responsive col-sm-8 ">
+<table class="table  table-bordered table-condensed" >
+    <caption>Product List</caption>
+        <thead>
+    <tr class="danger">  
+      <th><a (click)="sortById()">ID</a></th>
+      <th><a (click)="sortByName()">Name</a></th>
+      <th>Description</th>
+      <th><a (click)="sortByPrice()">Price</a></th>
+      <td></td>
+      <td></td>
+    </tr>
+    </thead>
+    <tbody *ngFor='let item of data1 | paginate : { itemsPerPage : 5, currentPage:p1} , let i= index of item'>
+    <tr class="success"><td>{{item.ID}}</td>
+    <td>{{item.Name}}</td>
+    <td>{{item.Description}}</td>
+    <td>{{item.Price}}</td>
+    <td><button type="button" class="btn btn-success" (click)="onEdit(item.ID,item.Name,item.Description,item.Price)">Edit</button></td>
+    <td><button type="button" class="btn btn-info" (click)="onDelete(item.Name)">Delete</button></td>
+    </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange) = "p1 = $event" ></pagination-controls>
+
+
+  <br>
+  <br>
+  <br>
+  
+ 
+  </div>
+  
+
+  <div class="col-sm-4" [hidden]="showEdit">
+   <h3 class="well">Edit Product Details </h3>
+  
+  <table class="col-sm-offset-4">
+      <tr>
+        <td>ID <span style="color:red">*</span></td>
+        <td><input type="text" [(ngModel)]="id" name="box1" ng-required="box1"> </td>
+      </tr>
+      <tr>
+        <td>Name<span style="color:red">*</span></td>
+        <td><input type="text" [(ngModel)]="name" name="box2" ng-required="box2"></td>
+      </tr>
+      <tr>
+        <td>Descriptin<span style="color:red">*</span></td>
+        <td><input type="text" [(ngModel)]="des" name="box3" ng-required="box3"></td>
+      </tr>
+      <tr>
+        <td>Price<span style="color:red">*</span></td>
+        <td><input type="text" [(ngModel)]="price" name="box4" ng-required="box4"></td>
+      </tr>
+      <tr>
+        <td><input type="submit" class="btn btn-success" (click)="onSubmit()" value="Submit"/></td>
+        <td><button type="button" class="btn btn-warning" (click)="homepage()">Cancel</button></td>
+
+      </tr>
+  </table>
+    
+
+  </div>
+
+  </div>
+   <div class="col-sm-4 col-sm-offset-2" >
+     <button type="button" class="btn btn-success" (click)="addProduct()">Add Product</button>
+      <button type="button" class="btn btn-danger" (click)="deleteAll()">Delete All</button>
+  </div>

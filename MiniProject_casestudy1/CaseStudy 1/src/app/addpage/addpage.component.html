@@ -1,0 +1,58 @@
+  <div>
+  <h3 class="jumbotron">Add new Details </h3>
+  <form name="form" #AddForm="ngForm" (ngSubmit)="AddForm.form.valid && onSubmit(AddForm)">
+  <table class="table">
+    <div class="form-group">
+      <tr>
+        <td>ID</td>
+        <td><input type="number" class="form-control" name="aid" id="aid" #aid="ngModel" [(ngModel)]="Addid" placeholder="Enter Id between 1-99" required maxlength="4" [ngClass]="{'is-invalid':AddForm.submitted && aid.invalid}"/>
+        <div *ngIf="AddForm.submitted && aid.invalid" class="invalid-feedback">
+          <div *ngIf="aid.errors.maxlength">ID is max 4</div>
+          <div *ngIf="aid.errors.required">ID is required</div>
+        </div>
+        </td>
+      </tr>
+    </div>
+     <div class="form-group">
+      <tr>
+        <td>Name</td>
+        <td><input type="text" class="form-control" name="aname" id="aname" #aname="ngModel" [(ngModel)]="Addname" required [ngClass]="{'is-invalid':AddForm.submitted && aname.invalid}" />
+        <div *ngIf="AddForm.submitted && aname-invalid" class="invalid-feedback" >
+            <div *ngIf="aname.errors.required">Name is required</div>
+        </div>
+        </td>
+      </tr>
+     </div>
+     <div class="form-group">
+      <tr>
+        <td>Descriptin</td>
+        <td><input type="text" class="form-control" name= "ades" id="ades" #ades="ngModel"[(ngModel)]="Adddes" required [ngClass]="{'is-invalid':AddForm.submitted && ades.invalid}">
+        <div *ngIf="AddForm.submitted && ades.invalid" class="invalid-feedback">
+            <div *ngIf="ades.errors.required">Description is required</div>
+        </div>
+        </td>
+      </tr>
+      </div>
+    <div class="form-group">
+      <tr>
+        <td>Price</td>
+        <td><input type="number" class="form-control" name="aprice" id="aprice" #aprice="ngModel" [(ngModel)]="Addprice" required [ngClass]="{'is-invalid':AddForm.submitted && aprice.invalid}">
+        <div *ngIf="AddForm.submitted && aprice.invalid" class="invalid-feedback">
+            <div *ngIf="aprice.errors.required">Description is required</div>
+        </div>
+        </td>
+      </tr>
+        </div>
+        <div class="form-group">
+      <tr>
+        <td><button type="submit" class="btn btn-success">Submit</button></td>
+        <td><button type="button" class="btn btn-warning" (click)="homepage(AddForm)">Cancel</button></td>
+
+      </tr>
+        </div>
+  </table>
+  </form>
+  </div>
+ 
+
+ 
